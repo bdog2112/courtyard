@@ -1,0 +1,152 @@
+[gd_scene load_steps=14 format=3 uid="uid://dxdt3olp3n5dr"]
+
+[ext_resource type="ArrayMesh" uid="uid://ruwbl5a6vlhl" path="res://widgets/meshes/ground_plane.res" id="1_tcb2m"]
+[ext_resource type="ArrayMesh" uid="uid://bw4jrhxf22spu" path="res://widgets/meshes/modular_fort_01_wall_thin_corner_02.res" id="2_ivcbr"]
+[ext_resource type="ArrayMesh" uid="uid://8u1vv6vxcgys" path="res://widgets/meshes/modular_fort_01_wall_thin_straight_04.res" id="3_7pre1"]
+[ext_resource type="ArrayMesh" uid="uid://c7rnbawaomqbk" path="res://widgets/meshes/modular_fort_01_wall_thin_gate_01.res" id="4_bi236"]
+[ext_resource type="ArrayMesh" uid="uid://couy07pnkgdat" path="res://widgets/meshes/modular_fort_01_wall_thin_corner_01.res" id="5_d1nvf"]
+[ext_resource type="ArrayMesh" uid="uid://cen6yuo4sy2ky" path="res://widgets/meshes/modular_fort_01_wall_thin_straight_02.res" id="6_i6mk7"]
+[ext_resource type="ArrayMesh" uid="uid://qv67vt0mjrvk" path="res://widgets/meshes/modular_fort_01_wall_walkway_corner_02.res" id="7_yxugu"]
+[ext_resource type="ArrayMesh" uid="uid://d4fh6s51bu6d" path="res://widgets/meshes/modular_fort_01_tower_round.res" id="8_dhcv1"]
+[ext_resource type="PackedScene" uid="uid://b3743uogoc1ax" path="res://character/Player.tscn" id="10_141ei"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tcb2m"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_ivcbr"]
+sky_material = SubResource("ProceduralSkyMaterial_tcb2m")
+
+[sub_resource type="Environment" id="Environment_7pre1"]
+background_mode = 2
+sky = SubResource("Sky_ivcbr")
+tonemap_mode = 2
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6vt38"]
+points = PackedVector3Array(-2, 0, -2.85, -2, 0, 1.15, 2, 0, -2.85, 2, 0, 1.15)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.718126, -0.385112, 0.579641, 0, 0.832921, 0.553392, -0.695913, 0.397405, -0.598143, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7pre1")
+
+[node name="Character" type="Node3D" parent="."]
+
+[node name="Player" parent="Character" instance=ExtResource("10_141ei")]
+transform = Transform3D(1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 0, 0, 0)
+
+[node name="Courtyard" type="Node3D" parent="."]
+
+[node name="ground_plane" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+mesh = ExtResource("1_tcb2m")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Courtyard/ground_plane"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Courtyard/ground_plane/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_6vt38")
+
+[node name="modular_fort_01_wall_thin_corner_02_001" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.60062, 0, 9.34255)
+mesh = ExtResource("2_ivcbr")
+skeleton = NodePath("")
+
+[node name="modular_fort_01_wall_thin_corner_02_002" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 4.1443, 0, 14.6778)
+mesh = ExtResource("2_ivcbr")
+skeleton = NodePath("")
+
+[node name="modular_fort_01_wall_thin_corner_02_003" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(-1, 0, -3.89414e-07, 0, 1, 0, 3.89414e-07, 0, -1, 16.8222, 0, -42.4645)
+mesh = ExtResource("2_ivcbr")
+skeleton = NodePath("")
+
+[node name="modular_fort_01_wall_thin_corner_02_004" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(3.57628e-07, 0, -1, 0, 1, 0, 1, 0, 3.57628e-07, -10.6143, 0, -47.7936)
+mesh = ExtResource("2_ivcbr")
+skeleton = NodePath("")
+
+[node name="modular_fort_01_wall_thin_straight_04_001" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(3.57628e-07, 0, -1, 0, 1, 0, 1, 0, 3.57628e-07, 11.487, 0, -47.7997)
+mesh = ExtResource("3_7pre1")
+skeleton = NodePath("")
+
+[node name="modular_fort_01_wall_thin_gate_01_001" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -3.26539, 0, 14.6778)
+mesh = ExtResource("4_bi236")
+skeleton = NodePath("")
+
+[node name="modular_fort_01_wall_thin_corner_01_001" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6142, 0, 7.33508)
+mesh = ExtResource("5_d1nvf")
+skeleton = NodePath("")
+
+[node name="modular_fort_01_wall_thin_corner_01_002" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(3.57628e-07, 0, 1, 0, 1, 0, -1, 0, 3.57628e-07, 9.47953, 0, 9.34255)
+mesh = ExtResource("5_d1nvf")
+skeleton = NodePath("")
+
+[node name="modular_fort_01_wall_thin_corner_02_005" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(-3.57628e-07, 0, 1, 0, 1, 0, -1, 0, -3.57628e-07, 11.487, 0, 7.32892)
+mesh = ExtResource("2_ivcbr")
+skeleton = NodePath("")
+
+[node name="modular_fort_01_wall_thin_corner_02_006" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.9495, 0, 1.99985)
+mesh = ExtResource("2_ivcbr")
+skeleton = NodePath("")
+
+[node name="modular_fort_01_wall_thin_straight_02_002" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.9495, 0, -12.8196)
+mesh = ExtResource("6_i6mk7")
+skeleton = NodePath("")
+
+[node name="modular_fort_01_wall_thin_straight_04_004" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(3.57628e-07, 0, -1, 0, 1, 0, 1, 0, 3.57628e-07, -3.20456, 0, -47.7936)
+mesh = ExtResource("3_7pre1")
+skeleton = NodePath("")
+
+[node name="modular_fort_01_wall_thin_straight_02_003" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 16.8222, 0, 1.99369)
+mesh = ExtResource("6_i6mk7")
+skeleton = NodePath("")
+
+[node name="modular_fort_01_wall_thin_straight_02_004" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.9495, 0, -27.639)
+mesh = ExtResource("6_i6mk7")
+skeleton = NodePath("")
+
+[node name="modular_fort_01_wall_thin_straight_02_005" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 16.8222, 0, -12.8257)
+mesh = ExtResource("6_i6mk7")
+skeleton = NodePath("")
+
+[node name="modular_fort_01_wall_thin_straight_02_006" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.9495, 0, -42.4584)
+mesh = ExtResource("6_i6mk7")
+skeleton = NodePath("")
+
+[node name="modular_fort_01_wall_thin_straight_02_007" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 16.8222, 0, -27.6451)
+mesh = ExtResource("6_i6mk7")
+skeleton = NodePath("")
+
+[node name="modular_fort_01_wall_walkway_corner_02_001" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -10.6163, 0, -45.229)
+mesh = ExtResource("7_yxugu")
+skeleton = NodePath("")
+
+[node name="modular_fort_01_tower_round_001" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.779468, 0, -48.7415)
+mesh = ExtResource("8_dhcv1")
+skeleton = NodePath("")
+
+[node name="modular_fort_01_wall_walkway_corner_02_002" type="MeshInstance3D" parent="Courtyard"]
+transform = Transform3D(-1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 14.2622, 0, -42.4522)
+mesh = ExtResource("7_yxugu")
+skeleton = NodePath("")
