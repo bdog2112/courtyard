@@ -217,14 +217,6 @@ func _get_inputs()->Vector3:
 	if Input.is_action_just_pressed("ui_jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	# Quit game
-	if Input.is_action_just_pressed("quit"):
-		get_tree().quit()
-
-	# Reload scene
-	if Input.is_action_just_pressed("start"):
-		get_tree().reload_current_scene()
-
 	# Get the input direction
 	var input_dir = Input.get_vector("move_left", "move_right", "move_fwd", "move_back")
 #	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()

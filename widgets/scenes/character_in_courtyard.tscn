@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://dxdt3olp3n5dr"]
+[gd_scene load_steps=15 format=3 uid="uid://dxdt3olp3n5dr"]
 
+[ext_resource type="Script" uid="uid://bpubjjdbllwff" path="res://widgets/scripts/main.gd" id="1_ivcbr"]
 [ext_resource type="ArrayMesh" uid="uid://ruwbl5a6vlhl" path="res://widgets/meshes/ground_plane.res" id="1_tcb2m"]
 [ext_resource type="ArrayMesh" uid="uid://bw4jrhxf22spu" path="res://widgets/meshes/modular_fort_01_wall_thin_corner_02.res" id="2_ivcbr"]
 [ext_resource type="ArrayMesh" uid="uid://8u1vv6vxcgys" path="res://widgets/meshes/modular_fort_01_wall_thin_straight_04.res" id="3_7pre1"]
@@ -25,7 +26,8 @@ tonemap_mode = 2
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6vt38"]
 points = PackedVector3Array(-2, 0, -2.85, -2, 0, 1.15, 2, 0, -2.85, 2, 0, 1.15)
 
-[node name="Node3D" type="Node3D"]
+[node name="Main" type="Node3D"]
+script = ExtResource("1_ivcbr")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.718126, -0.385112, 0.579641, 0, 0.832921, 0.553392, -0.695913, 0.397405, -0.598143, 0, 0, 0)
