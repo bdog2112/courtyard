@@ -3,7 +3,10 @@ Hack and slash shootem action adventure games are a lot of fun! Hence, this repo
 
 What better lab environment than the classic castle courtyard? The potential is limitless.
 
-(Shout out to PolyHaven.com for the widgets).
+(Shout out to PolyHaven.com and Mixamo.com for the widgets).
+
+<img src="./images/courtyard_screenshot_01.jpg">
+
 
 HERE ARE SOME OF THE PRESENT GOALS (IN NO PARTICULAR ORDER):
 - Add dummy target and bullseye targets to walls
