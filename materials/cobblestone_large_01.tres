@@ -1,0 +1,48 @@
+[gd_resource type="StandardMaterial3D" load_steps=11 format=3 uid="uid://dh4ce4qys4pl8"]
+
+[ext_resource type="Texture2D" uid="uid://dbj34p3skdfv0" path="res://textures/cobblestone_large_01_diff_4k.jpg" id="1_ml2mk"]
+[ext_resource type="Texture2D" uid="uid://dfyu2lxcwv4r3" path="res://textures/cobblestone_large_01_rough_4k.jpg" id="2_16ff2"]
+[ext_resource type="Texture2D" uid="uid://daskd50xccq2i" path="res://textures/cobblestone_large_01_nor_4k.jpg" id="3_myb4e"]
+
+[sub_resource type="Gradient" id="Gradient_ml2mk"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_16ff2"]
+gradient = SubResource("Gradient_ml2mk")
+
+[sub_resource type="Gradient" id="Gradient_16ff2"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_myb4e"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_atdkr"]
+seamless = true
+color_ramp = SubResource("Gradient_16ff2")
+noise = SubResource("FastNoiseLite_myb4e")
+
+[sub_resource type="Curve" id="Curve_pi0nv"]
+_data = [Vector2(0.2, 0.494737), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveTexture" id="CurveTexture_iaa2b"]
+curve = SubResource("Curve_pi0nv")
+
+[resource]
+resource_name = "cobblestone_large_01"
+cull_mode = 2
+albedo_texture = ExtResource("1_ml2mk")
+metallic = 1.0
+metallic_texture = ExtResource("2_16ff2")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_16ff2")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_scale = 8.0
+normal_texture = ExtResource("3_myb4e")
+ao_texture = SubResource("GradientTexture2D_16ff2")
+detail_enabled = true
+detail_mask = SubResource("CurveTexture_iaa2b")
+detail_blend_mode = 2
+detail_uv_layer = 1
+detail_albedo = SubResource("NoiseTexture2D_atdkr")
+uv1_scale = Vector3(20, 20, 1)
+uv1_offset = Vector3(0, -19, 0)
+uv2_scale = Vector3(1.5, 1.5, 1.5)

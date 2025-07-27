@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3743uogoc1ax"]
+
+[ext_resource type="Script" uid="uid://bx2jb81o7v6dm" path="res://character/Player.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://d4ae1ob3jfbjr" path="res://character/Character.tscn" id="2"]
+
+[sub_resource type="CapsuleShape3D" id="4"]
+radius = 0.315828
+height = 1.75744
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+script = ExtResource("1")
+JUMP_VELOCITY = 12
+
+[node name="CameraPivot" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.00513, 0)
+
+[node name="SpringArm" type="SpringArm3D" parent="CameraPivot"]
+transform = Transform3D(1, 0, 0, 0, 0.992546, 0.121869, 0, -0.121869, 0.992546, 0, 0, 0)
+collision_mask = 2
+spring_length = 3.5
+margin = 0.5
+
+[node name="Camera" type="Camera3D" parent="CameraPivot/SpringArm"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.5)
+size = 19.0
+
+[node name="PlayerCollision" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.911668, 0)
+shape = SubResource("4")
+
+[node name="Character" parent="." instance=ExtResource("2")]

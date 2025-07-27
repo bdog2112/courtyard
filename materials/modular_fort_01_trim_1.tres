@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://cs1vrr2dws8kl"]
+
+[ext_resource type="Texture2D" uid="uid://b6er4mnihbga2" path="res://textures/modular_fort_01_trim_diff.jpg" id="1_c51yb"]
+[ext_resource type="Texture2D" uid="uid://dtnm2beauufv6" path="res://textures/modular_fort_01_trim_rough.jpg" id="2_uf44q"]
+[ext_resource type="Texture2D" uid="uid://rcpas1xmq2vu" path="res://textures/modular_fort_01_trim_nor_gl.jpg" id="3_bt10v"]
+
+[resource]
+resource_name = "modular_fort_01_trim_1"
+cull_mode = 2
+albedo_texture = ExtResource("1_c51yb")
+metallic = 1.0
+metallic_texture = ExtResource("2_uf44q")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_uf44q")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_bt10v")

@@ -1,0 +1,153 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dtjm2s16g64br"
+path="res://.godot/imported/courtyard04.gltf-7bb6d374ce9b514ad027362cade5012e.scn"
+
+[deps]
+
+source_file="res://import/courtyard04.gltf"
+dest_files=["res://.godot/imported/courtyard04.gltf-7bb6d374ce9b514ad027362cade5012e.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path="uid://dv4mmpdexe2he"
+_subresources={
+"materials": {
+"cobblestone_large_01": {
+"use_external/enabled": true,
+"use_external/path": "uid://dh4ce4qys4pl8"
+},
+"mtlBrown": {
+"use_external/enabled": true,
+"use_external/path": "uid://dcv62n4h4lomj"
+}
+},
+"nodes": {
+"PATH:Landscape": {
+"mesh_instance/layers": 3
+},
+"PATH:ground_plane": {
+"import/skip_import": true,
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_tower_round_001": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_tower_round_002": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_tower_round_003": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_tower_round_004": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_corner_01_001": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_corner_01_002": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_corner_01_003": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_corner_01_004": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_corner_02_001": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_corner_02_002": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_corner_02_003": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_corner_02_004": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_corner_02_005": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_corner_02_006": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_corner_02_007": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_corner_02_008": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_gate_01_001": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_straight_02_001": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_straight_02_002": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_straight_02_003": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_straight_02_004": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_straight_02_005": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_straight_02_006": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_straight_04_001": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_straight_04_002": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_straight_04_003": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_straight_04_004": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_straight_04_006": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_straight_04_007": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_straight_04_008": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_straight_04_009": {
+"mesh_instance/layers": 3
+},
+"PATH:modular_fort_01_wall_thin_straight_04_010": {
+"mesh_instance/layers": 3
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1
